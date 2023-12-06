@@ -1,0 +1,33 @@
+Global team members?
+
+Consolidate CSS
+
+Cache heroku calls 
+
+Axios/fetch and the way they use promsises also see if can unify Heroku.ts scripts
+
+Refresh All
+How to show invited/not accepted yet? 
+    https://devcenter.heroku.com/articles/platform-api-reference#team-invitation-list
+
+Database config - /Users/nigelrudd/Library/DBeaverData/workspace6/General/.dbeaver
+Performance stats - https://api.metrics.heroku.com/metrics/d3fb5b43-7d30-4930-8584-af6724ecbf25/dyno/memory?process_type=web&start_time=2023-05-14T09%3A50%3A00.000Z&end_time=2023-05-15T09%3A40%3A00.000Z&step=10m&region=
+
+---------------------------------------------------------------------
+Done
+
+Configure user/token for heroku - Heorku.ts
+goto heroku page
+
+formations - add feedback when applying
+Users at team level not app level, or both?
+rework menu structure - Common & All teams, users etc.
+refresh page on environment variables when add salts
+Add new environment variables
+formations - tidy screen display
+Reduce code in AppsTree.ts getSubNodes()
+Pinned apps
+    Show pined apps, then sub-menu for all apps.
+
+Reset WP user password
+Create WP users

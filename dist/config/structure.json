@@ -1,0 +1,113 @@
+{
+    "root": {
+        "nodeType": "team",
+        "resource": "/teams",
+        "subMenusTop": [
+            "userBank"
+        ]
+    },
+    "team": {
+        "nodeType": "app",
+        "subMenus": [
+            "accessList"
+        ],
+        "resource": "/teams/{team_id}/apps"
+    },
+    "app": {
+        "subMenus": [
+            "overview",
+            "settings",
+            "console",
+            "redisCLI",
+            "resetWP"
+        ]
+    },
+    "overview": {
+        "label": "Overview",
+        "subMenus": [
+            "sites",
+            "overviewAddon",
+            "overviewDynos",
+            "domains"
+        ],
+        "componentType": "Overview"
+    },
+    "sites": {
+        "label": "Sites",
+        "command": "heroku:openVueApp",
+        "componentType": "Overview",
+        "resource": "/apps/{app_id}"
+    },
+    "formation": {
+        "label": "Formation",
+        "resource": "/apps/{app_id}/formation",
+        "command": "heroku:openVueApp",
+        "componentType": "Formation"
+    },
+    "overviewAddon": {
+        "resource": "/apps/{app_id}/addons",
+        "command": "heroku:openVueApp",
+        "label": "Add Ons",
+        "componentType": "Addons"
+    },
+    "addOnDetails": {
+        "resource": "/apps/{app_id}/addons",
+        "details": "/apps/{name_id}/config",
+        "command": "heroku:openVueApp",
+        "componentType": "JSONDump"
+    },
+    "overviewDynos": {
+        "label": "Dynos",
+        "resource": "/apps/{app_id}/dynos",
+        "command": "heroku:openVueApp",
+        "componentType": "JSONDump"
+    },
+    "userBank": {
+        "label": "User Bank",
+        "command": "heroku:openVueApp",
+        "componentType": "UserBank",
+        "additionalData": "users"
+    },
+    "accessList": {
+        "resource": "/teams/{team_id}/members",
+        "label": "Permissions",
+        "command": "heroku:openVueApp",
+        "componentType": "UserDisplay",
+        "additionalData": "users"
+    },
+    "settings": {
+        "label": "Settings",
+        "subMenus": [
+            "environmentVariables",
+            "formation"
+        ]
+    },
+    "environmentVariables": {
+        "label": "Environment variables",
+        "resource": "/apps/{app_id}/config-vars",
+        "command": "heroku:openVueApp",
+        "componentType": "EnvironmentVariables"
+    },
+    "domains": {
+        "label": "Domains",
+        "resource": "/apps/{app_id}/domains",
+        "command": "heroku:openVueApp",
+        "componentType": "Domains"
+    },
+    "console": {
+        "label": "Console",
+        "command": "heroku:console",
+        "consoleCommand": "heroku run bash --app={app}"
+    },
+    "redisCLI": {
+        "label": "Redis CLI",
+        "command": "heroku:console",
+        "consoleCommand": "heroku redis:cli --app={app}"
+    },
+    "resetWP": {
+        "label": "Update WP User",
+        "command": "heroku:openVueApp",
+        "componentType": "UpdateWPUser",
+        "consoleCommand1": "heroku run bash --app={app}\r\nwp user update nigel.rudd --user_pass=locked4219\r\nexit\r\nexit"
+    }
+}
